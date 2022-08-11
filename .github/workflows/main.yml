@@ -10,7 +10,7 @@ jobs:
   Clone-down:
     name: Clone down repo
     runs-on: ubuntu-latest
-    container: golang:1.19.0-alpine3.16
+    container: docker-golang-gcc:1.16-alpine
     steps:
     - uses: actions/checkout@v2
     - name: Upload Repo
@@ -21,7 +21,7 @@ jobs:
   Test:
     runs-on: ubuntu-latest
     needs: Clone-down
-    container: golang:1.19.0-alpine3.16
+    container: docker-golang-gcc:1.16-alpine
     steps:
     - name: Download code
       uses: actions/download-artifact@v2
