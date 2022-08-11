@@ -28,7 +28,7 @@ jobs:
       with:
         name: code
         path: . 
-    - name: Test with golang:
+    - name: Test with golang
       run: go test
     - name: Upload repo
       uses: actions/upload-artifact@v2
